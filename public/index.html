@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="./style.css">   
+ <title>Hospital</title>
+</head>
+<body>
+    <div class="container">
+        <h1 id="well">Get well soon</h1>
+
+        <div class="icons">
+
+        
+        <div class="box">
+            <img src="./images/Dermatology.png" alt="Dermatology"  class="Dermatology"> 
+            <p>Dermatology <br>40$</p>
+        </div>
+
+        <div class="box">
+            <img src="./images/heart.png" alt="heart" class="heart">
+            <p>Heart <br>200$</p>
+
+        </div>
+
+        <div class="box">
+            <img src="./images/Medical stethoscope.png" alt="Medical stethoscope" class="stethoscope">
+            <p>Medical Examination <br>20$</p>
+
+        </div>
+
+        <div class="box">
+            <img src="./images/teeth.png" alt="teeth" class="teeth">
+            <p>Dentistry<br>80$</p>
+
+        </div>
+    </div>
+        <div class="buttons">
+            <button class="balance-button"><b>Balance</b></button>
+            <button class="close-balance-window">Close</button>
+        </div>
+
+
+        <div class="balance">
+    
+            <p class="b">Balance : <span>0</span></p>
+            <p id="A">Dermatology : <span>0</span> </p>
+            <p id="B">Heart : <span>0</span> </p>
+            <p id="C">Medical Examination : <span>0</span></p>
+            <p id="D">Dentistry : <span>0</span></p>
+        </div>
+    
+
+
+
+<form action="/" method="POST" class="form-2">
+    <div class="window-2">
+        
+            <input class="name" placeholder="Name" name="name">
+       
+            <input class="age" placeholder="Age" name="age">
+       
+
+        <div class="info">
+            <div class="Disease">
+                <input type="text" placeholder="Disease Name.." name="Disease">
+            </div>
+
+            <div class="pharmaceutical">
+                <textarea  placeholder="pharmaceutical" name="pharmaceutical"></textarea>
+            </div>
+
+            <div class="nots">
+                <textarea  placeholder="Nots.." name="nots"></textarea>
+            </div>
+        </div>
+    </div>
+    <button id="download">PDF</button>
+    <button id="close">Close</button>
+</form>
+
+</div>
+    <script src="./index.js"></script>
+</body>
+</html>
