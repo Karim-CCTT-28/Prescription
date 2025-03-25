@@ -1,51 +1,13 @@
-var balance = 0 ,Dermatology = 0 , heart = 0, Medical_examination = 0 , Dentistry = 0;
-var flag = true ;
+var balance = 0 ,Dermatology = 0 , heart = 0, Medical_examination = 0 , Dentistry = 0 , index;
 
 for(let i=0 ; i<document.querySelectorAll(".box").length;i++){
 
     document.querySelectorAll(".box")[i].addEventListener("click",function(){
         document.querySelector(".form-2").style.display = "block";
-        console.log(i)
-        if(flag){
-
+        console.log("i : "+i)
         
-        switch(i){
-            case 0:
-                balance+=40;
-                Dermatology++;
-                console.log("here is it")
-            break;    
-
-            case 1:
-                balance+=200;
-                heart++;
-            break; 
-
-            case 2:
-                balance+=20;
-                Medical_examination++;
-            break; 
-
-            case 3:
-                balance+=80;
-                Dentistry++;
-            break; 
-        }
-        document.querySelector(".b span").textContent=balance;
-        document.querySelector("#A span").textContent=Dermatology;
-        document.querySelector("#B span").textContent=heart;
-        document.querySelector("#C span").textContent=Medical_examination;
-        document.querySelector("#D span").textContent=Dentistry;
-        flag=false;
-    }
-
-
-
-
-
-
-
-
+         index = i;
+       
 
        
     });
@@ -61,13 +23,7 @@ close1.addEventListener("click",function(){
 });
 
 
-let download = document.querySelector("#download");
-download.addEventListener("click",function(){
-    document.querySelector(".form-2").style.display = "none";
-    flag=true;
 
-
-});
 
 
 let balanceButton = document.querySelector(".balance-button");
@@ -88,3 +44,47 @@ close2.addEventListener("click",function(){
     balanceButton.style.dsiplay = "block";
     close2.style.display = "none";
 });
+
+
+
+
+
+     
+
+let pdf = document.querySelector("#pdf");
+pdf.addEventListener("click",function(){
+    document.querySelector(".form-2").style.display = "none";
+   console.log(index);
+    
+    switch(index){
+        case 0:
+            balance+=40;
+            Dermatology++;
+        break;    
+
+        case 1:
+            balance+=200;
+            heart++;
+        break; 
+
+        case 2:
+            balance+=20;
+            Medical_examination++;
+        break; 
+
+        case 3:
+            balance+=80;
+            Dentistry++;
+        break; 
+    }
+
+    document.querySelector(".b span").textContent=balance;
+    document.querySelector("#A span").textContent=Dermatology;
+    document.querySelector("#B span").textContent=heart;
+    document.querySelector("#C span").textContent=Medical_examination;
+    document.querySelector("#D span").textContent=Dentistry;
+
+
+});
+
+
