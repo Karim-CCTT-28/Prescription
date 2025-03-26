@@ -50,7 +50,7 @@ app.post("/",(req,res)=>{
 
     doc.save("./public/PDF/Person.pdf");
 
-    res.send(`تم إنشاء ملف PDF: <a href="/PDF/Person.pdf">تحميل</a>`);
+    res.sendFile(__dirname+"/public/PDF/Person.pdf");
   });
 
 
