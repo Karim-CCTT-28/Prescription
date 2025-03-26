@@ -9,7 +9,7 @@ import { fileURLToPath } from 'url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const app = express();
-const port = 3000;
+const port = 8080;
 
 app.use(express.urlencoded({ extended: true })); // لبيانات النموذج المشفرة URL
 
@@ -41,17 +41,17 @@ app.post("/",(req,res)=>{
    
 
 
-  doc.text("    Welcome"+
+  doc.text("  Welcome"+"\n"+
     person.name +"\n"+
     person.age+"\n"+
     person.Disease+"\n"+
     person.pharmaceutical+"\n"+
     person.Nots, 10, 10);
 
-    doc.save("Person"+count+".pdf");
+    doc.save("./public/PDF/Person.pdf");
 
-  
-});
+    res.send(`تم إنشاء ملف PDF: <a href="/PDF/Person.pdf">تحميل</a>`);
+  });
 
 
 
